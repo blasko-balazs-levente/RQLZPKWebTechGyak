@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Táblázat készítése, formázása</title>
+</head>
+<style>
+    table {
+        table-layout: fixed;
+        background-color: bisque;
+    }
+
+    td{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <h3>Táblázat készítése, formázása</h3>
+    <b><table>
+        <tr style="background-color: red;">
+            <td>1. sor 1. elem</td>
+            <td style="text-align: right;">1. sor 2.<br>elem</td>
+            <td style="vertical-align: bottom; text-align: center">1. sor 3.<br> elem</td>
+        </tr>
+        <tr>
+            <td>2. sor 4.<br>elem</td>
+            <td style="overflow:scroll;">sadijfgohagfigafhsufhasuhf<br>sfuhiashfiuafsuhfuhs<br>dfhdushfs<br>duhfsidufhsidufh</td>
+            <td style="text-align:center; vertical-align: center;">2. sor 6.<br>elem</td>
+        </tr>
+        <tr>
+            <td>3. sor 7.<br>elem</td>
+            <td style="background-color:deeppink; text-align:center">3. sor 8.<br>elem</td>
+            <td>3. sor 9. eleme</td>
+        </tr>
+    </table></b>
+</body>
+</html>
