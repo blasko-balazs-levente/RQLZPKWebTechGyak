@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON megvalósítása – JavaScript</title>
+</head>
+<body>
+    <h1>Könyvek adatai</h1>
+
+    <div id="bookList"></div>
+
+    <script>
+        const booksJSON = [
+            {
+                "author": "Nyékyné Dr. Gaizler Judit",
+                "title": "Java 2 I-II. - Útikalauz programozóknak 5.0",
+                "year": 2009
+            },
+            {
+                "author": "Reiter István",
+                "title": "C# programozás lépésről lépésre",
+                "year": 2018
+            }
+        ];
+
+        const bookListElement = document.getElementById('bookList');
+        booksJSON.forEach(book => {
+            const bookElement = document.createElement('div');
+            bookElement.innerHTML = `
+                <p><strong>Author:</strong> ${book.author}</p>
+                <p><strong>Title:</strong> ${book.title}</p>
+                <p><strong>Year:</strong> ${book.year}</p>
+                <hr>
+            `;
+            bookListElement.appendChild(bookElement);
+        });
+    </script>
+</body>
+</html>

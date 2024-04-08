@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Text konvertálása JavaScript objektummá!</title>
+</head>
+<body>
+    <h1>JSON Text konvertálása JavaScript objektummá</h1>
+
+    <pre id="jsonText">
+        {
+            "név": "Blaskó Balázs Levente",
+            "irányítószám": "3532",
+            "város": "Miskolc",
+            "egyetem": "ME"
+        }
+    </pre>
+
+    <button onclick="convertJSON()">Konvertálás</button>
+
+    <script>
+        function convertJSON() {
+            try {
+                const jsonTextElement = document.getElementById('jsonText');
+                const jsonString = jsonTextElement.textContent.trim();
+                const jsonObject = JSON.parse(jsonString);
+
+                alert('JavaScript objektum: ' + JSON.stringify(jsonObject));
+            } catch (error) {
+                alert('Hiba történt a konvertálás során: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>
