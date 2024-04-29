@@ -1,0 +1,34 @@
+{
+    "BB_orarend": {
+        "kurzus": [
+        {
+            "kurzusnev": "Web technológia alapjai",
+            "idopont": {
+                "nap": "Hétfő",
+                "tol": 14,
+                "ig": 16
+            },
+            "helyszin": "In103",
+            "oktato": "Dr. Benerik László",
+            "szak": "MI",
+            "cim": {
+                "street": "Egyetemváros",
+                "city": "Miskolc",
+                "code": "1021"
+            },
+            "phone number":
+            [
+            {
+                "type": "Mobil",
+                "number": "0630 123-4567"
+
+            },
+            {
+                "type": "Vezetékes",
+                "number": "0630 555-4567"
+            }
+            ]
+        }
+        ]
+    }
+    }
