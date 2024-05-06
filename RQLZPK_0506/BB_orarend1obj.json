@@ -1,0 +1,26 @@
+{
+    "kurzusnev": "Szoftvertechnológia gyakorlat",
+    "oktato": "Dr. Tompa Tamás",
+    "szak": ["PTI", "MI"],
+    "idopont": {
+      "nap": "Hétfő",
+      "tol": "10:00",
+      "ig": "12:00"
+    },
+    "helyszin": "Inf/202",
+    "cim": {
+      "street": "Egyetemváros",
+      "city": "Miskolc",
+      "code": "1021"
+    },
+    "telefonszam": [
+      {
+        "típus": "Vezetékes",
+        "szám": "0646 555-123"
+      },
+      {
+        "típus": "Mobil",
+        "szám": "0670 555-4567"
+      }
+    ]
+  }

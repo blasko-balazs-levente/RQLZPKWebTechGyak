@@ -1,0 +1,192 @@
+{
+    "heti_orarend": {
+      "év": 2024,
+      "félév": "Tavaszi félév",
+      "szak": "Mérnökinformatikus BSc",
+      "órarend": [
+        {
+            "kurzusnev": "Szoftvertechnológia gyakorlat",
+            "oktato": "Dr. Tompa Tamás",
+            "szak": ["PTI", "MI"],
+            "idopont": {
+              "nap": "Hétfő",
+              "tol": "10:00",
+              "ig": "12:00"
+            },
+            "helyszin": "Inf/202",
+            "cim": {
+              "street": "Egyetemváros",
+              "city": "Miskolc",
+              "code": "1021"
+            },
+            "telefonszam": [
+              {
+                "típus": "Vezetékes",
+                "szám": "0646 555-123"
+              },
+              {
+                "típus": "Mobil",
+                "szám": "0670 555-4567"
+              }
+            ]
+          },
+        {
+          "kurzusnev": "Webtechnológia alapjai",
+          "oktato": "Dr. Bednarik László",
+          "szak": ["PTI", "MI"],
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "14:00",
+            "ig": "16:00"
+          },
+          "helyszin": "Inf/103",
+          "cim": {
+            "street": "Egyetemváros",
+            "city": "Miskolc",
+            "code": "1021"
+          },
+          "telefonszam": [
+            {
+              "típus": "Vezetékes",
+              "szám": "0646 555-123"
+            },
+            {
+              "típus": "Mobil",
+              "szám": "0670 555-4567"
+            }
+          ]
+        },
+        {
+            "kurzusnev": "Adatbázis rendszerek II.",
+            "oktato": "Szűcs Miklós",
+            "szak": ["PTI", "MI"],
+            "idopont": {
+              "nap": "Kedd",
+              "tol": "12:00",
+              "ig": "14:00"
+            },
+            "helyszin": "Inf/103",
+            "cim": {
+              "street": "Egyetemváros",
+              "city": "Miskolc",
+              "code": "1021"
+            },
+            "telefonszam": [
+              {
+                "típus": "Vezetékes",
+                "szám": "0646 555-123"
+              },
+              {
+                "típus": "Mobil",
+                "szám": "0670 555-4567"
+              }
+            ]
+          },
+        {
+          "kurzusnev": "Numerikus analízis",
+          "oktato": "Dr. Földvári Attila József",
+          "szak": ["PTI", "MI"],
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "14:00",
+            "ig": "16:00"
+          },
+          "helyszin": "A/1. 204",
+          "cim": {
+            "street": "Egyetemváros",
+            "city": "Miskolc",
+            "code": "1021"
+          },
+          "telefonszam": [
+            {
+              "típus": "Vezetékes",
+              "szám": "0646 555-123"
+            },
+            {
+              "típus": "Mobil",
+              "szám": "0670 555-4567"
+            }
+          ]
+        },
+        {
+            "kurzusnev": "Fizika",
+            "oktato": "Dr. Pszota Gábor",
+            "szak": ["PTI", "MI"],
+            "idopont": {
+              "nap": "Szerda",
+              "tol": "10:00",
+              "ig": "14:00"
+            },
+            "helyszin": "A/1. 301",
+            "cim": {
+              "street": "Egyetemváros",
+              "city": "Miskolc",
+              "code": "1021"
+            },
+            "telefonszam": [
+              {
+                "típus": "Vezetékes",
+                "szám": "0646 555-123"
+              },
+              {
+                "típus": "Mobil",
+                "szám": "0670 555-4567"
+              }
+            ]
+          },
+          {
+            "kurzusnev": "Java programozás",
+            "oktato": "Csépányi-Fürjes László",
+            "szak": ["PTI", "MI"],
+            "idopont": {
+              "nap": "Csütörtök",
+              "tol": "10:00",
+              "ig": "14:00"
+            },
+            "helyszin": "Inf/101",
+            "cim": {
+              "street": "Egyetemváros",
+              "city": "Miskolc",
+              "code": "1021"
+            },
+            "telefonszam": [
+              {
+                "típus": "Vezetékes",
+                "szám": "0646 555-123"
+              },
+              {
+                "típus": "Mobil",
+                "szám": "0670 555-4567"
+              }
+            ]
+          },
+          {
+            "kurzusnev": "Biztonság és védelem a számítástechnikában",
+            "oktato": "Wagner György",
+            "szak": ["PTI", "MI"],
+            "idopont": {
+              "nap": "Csütörtök",
+              "tol": "14:00",
+              "ig": "16:00"
+            },
+            "helyszin": "Inf/103",
+            "cim": {
+              "street": "Egyetemváros",
+              "city": "Miskolc",
+              "code": "1021"
+            },
+            "telefonszam": [
+              {
+                "típus": "Vezetékes",
+                "szám": "0646 555-123"
+              },
+              {
+                "típus": "Mobil",
+                "szám": "0670 555-4567"
+              }
+            ]
+          }
+      ]
+    }
+  }
+  
