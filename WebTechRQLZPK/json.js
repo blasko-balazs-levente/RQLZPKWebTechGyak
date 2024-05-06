@@ -1,48 +1,49 @@
 $(document).ready(function() {
-          $('#json').click(function() {
-          $.ajax({
-        url: 'courses.json', // Az endpoint, ahol a JSON található
-        type: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            // Sikeresen lekértük a JSON-t
+    // Gomb kattintás eseménykezelője
+    $('button').click(function() {
+        var teacherId = $(this).attr('id'); // A gomb id-je alapján kiválasztjuk a tanárt
 
-            // Az objektum bejárása és adatok megjelenítése
-            $.each(data['Bass lessons']['courses'], function(index, course) {
-                // Tanár nevek
-                var teachers = course['Teacher'].join(', ');
-                
-                // Tanfolyam napjai és időpontjai
-                var days = course['Date']['Day'].join(', ');
-                var times = course['Date']['Time'].join(', ');
-                
-                // Tanfolyam helyszíne
-                var location = course['Location']['Street'] + ', ' + 
-                               course['Location']['City'] + ', ' + 
-                               course['Location']['Postcode'];
-                
-                // Tanfolyam ára és telefonszáma
-                var price = course['Price'];
-                var phoneNumber = course['PhoneNumber'];
+        $.ajax({
+            url: 'courses.json', // JSON fájl elérési útja
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Sikeres AJAX kérés esetén
 
-                // Adatok megjelenítése a HTML oldalon
-                var html = '<div class="course">';
-                html += '<h3>Teachers: ' + teachers + '</h3>';
-                html += '<p>Days: ' + days + '</p>';
-                html += '<p>Times: ' + times + '</p>';
-                html += '<p>Location: ' + location + '</p>';
-                html += '<p>Price: ' + price + '</p>';
-                html += '<p>Contact: ' + phoneNumber + '</p>';
-                html += '</div>';
+                // Tanár adatainak kiválasztása az ID alapján
+                var course = data['Bass lessons']['courses'].find(function(item) {
+                    return item.Teacher === teacherId;
+                });
 
-                // A létrehozott HTML tartalom beillesztése az oldalra
-                $('#courses-container').append(html);
-            });
-        },
-        error: function(xhr, status, error) {
-            // Hiba esetén kezelés
-            console.log('Hiba történt az AJAX kérés során: ' + error);
-        }
-    });
-  });
+                if (course) {
+                    // Adatok megjelenítése
+                    var teachers = course['Teacher'];
+                    var days = course['Date']['Day'];
+                    var times = course['Date']['Time'];
+                    var location = course['Location']['Street'] + ', ' + course['Location']['City'] + ', ' + course['Location']['Postcode'];
+                    var price = course['Price'];
+                    var phoneNumber = course['PhoneNumber'];
+
+                    // HTML létrehozása az adatokkal
+                    var html = '<div class="course">';
+                    html += '<h3>Teacher: ' + teachers + '</h3>';
+                    html += '<p>Day: ' + days + '</p>';
+                    html += '<p>Time: ' + times + '</p>';
+                    html += '<p>Location: ' + location + '</p>';
+                    html += '<p>Price: ' + price + '</p>';
+                    html += '<p>Contact: ' + phoneNumber + '</p>';
+                    html += '</div>';
+
+                    // A tartalom beillesztése a containerbe
+                    $('#courses-container').html(html);
+                } else {
+                    $('#courses-container').html('<p>Course not found.</p>');
+                }
+            },
+            error: function(xhr, status, error) {
+                // Hiba kezelése
+                console.log('Hiba történt az AJAX kérés során: ' + error);
+            }
         });
+    });
+});
