@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=700px, height=350px, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        width: 700px;
+        height: 350px;
+      }
+    </style>
+  </head>
+  <header id="fejlec" class="fejlec">Rajzolás a vászonra NLFUA8</header>
+  <body>
+    <section id="tartalom">
+      <canvas
+        id="IKCanvas"
+        width="700px"
+        height="350"
+        style="border: 1px solid #000000"
+      ></canvas>
+    </section>
+
+    <footer id="lablec">
+      <hr />
+      <h3>Források:</h3>
+      <a href="https://www.w3schools.com/html/html5_canvas.asp"
+        >https://www.w3schools.com/html/html5_canvas.asp</a
+      >
+      <a href="https://www.w3schools.com/html/html5_canvas.asp"
+        >https://www.w3schools.com/html/html5_canvas.asp</a
+      >
+      <a href="https://www.w3schools.com/html/html5_canvas.asp"
+        >https://www.w3schools.com/html/html5_canvas.asp</a
+      >
+    </footer>
+
+    <script>
+      window.onload = function () {
+        var ik = document.getElementById("BBCanvas");
+        var ikl = ik.getContext("2d");
+
+        ikl.lineWidth = 5;
+        ikl.strokeStyle = "#0066ff";
+        ikl.strokeRect(80, 180, 200, 120);
+
+        var gradient = ikl.createRadialGradient(175, 87, 10, 200, 100, 75);
+
+        gradient.addColorStop("0", "#ffcc00");
+        gradient.addColorStop("0.3", "#6600ff");
+        gradient.addColorStop("1.0", "#33ff33");
+
+        ikl.fillStyle = gradient;
+        ikl.fillRect(100, 60, 150, 75);
+
+        ikl.lineWidth = 7;
+        ikl.strokeStyle = "#6633ff";
+        ikl.beginPath();
+        ikl.arc(450, 150, 65, 0.3 * Math.PI, 1.5 * Math.PI);
+        ikl.stroke();
+
+        ikl.fillStyle = "#ffcc33";
+        ikl.fill();
+
+        ikl.lineWidth = 2;
+        ikl.strokeStyle = "#cc0066";
+        ikl.font = "40 px Calibri";
+
+        ikl.textAlign = "center";
+        ikl.fillStyle = "#ff6600";
+        ikl.fillText("Mernokinformatikus 2024", 350, 40);
+
+        var img = document.getElementById("kep");
+        ikl.drawImage(img, 500, 200, 500, 700, 560, 200, 135, 180);
+      };
+    </script>
+  </body>
+</html>

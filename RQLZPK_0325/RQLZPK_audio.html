@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Audio vezérlés</title>
+    <style>
+      header,
+      footer {
+        background-color: #f1f1f1;
+        color: #333;
+        padding: 10px 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Audio lejátszó</h1>
+    </header>
+
+    <audio controls id="mainAudio">
+      <source src="RQLZPK_audio1.mp3" type="audio/mp3" />
+    </audio>
+    <button onclick="playPauseAudio()">Lejátszás/Szünet</button>
+    <button onclick="setVolume(0)">Néma</button>
+    <button onclick="setVolume(0.5)">Halk</button>
+    <button onclick="setVolume(1)">Hangos</button>
+    <button onclick="setPlaybackRate(0.5)">Nagyon lassú</button>
+    <button onclick="setPlaybackRate(0.75)">Lassú</button>
+    <button onclick="setPlaybackRate(1)">Normál</button>
+    <button onclick="setPlaybackRate(1.25)">Gyorsabb</button>
+    <button onclick="setPlaybackRate(1.5)">Nagyon gyors</button>
+    <button onclick="playSoundEffect('yes.mp3')">Pozitív</button>
+    <button onclick="playSoundEffect('no.mp3')">Negatív</button>
+    <button onclick="jumpToTime(90)">Ugrás 1:30-ra</button>
+
+    <footer>
+      <div id="audioInfo">Az audio információi itt jelennek meg.</div>
+    </footer>
+
+    <script>
+      var mainAudio = document.getElementById("mainAudio");
+      var audioInfo = document.getElementById("audioInfo");
+
+      function playPauseAudio() {
+        if (mainAudio.paused) {
+          mainAudio.play();
+        } else {
+          mainAudio.pause();
+        }
+      }
+
+      function setVolume(level) {
+        mainAudio.volume = level;
+      }
+
+      function setPlaybackRate(rate) {
+        mainAudio.playbackRate = rate;
+      }
+
+      function playSoundEffect(effectFile) {
+        var effectAudio = new Audio(effectFile);
+        effectAudio.play();
+      }
+
+      function jumpToTime(seconds) {
+        mainAudio.currentTime = seconds;
+      }
+
+      mainAudio.onended = function () {
+        alert("VÉGE");
+        showAudioInfo();
+      };
+
+      function showAudioInfo() {
+        var duration = parseInt(mainAudio.duration, 10);
+        var currentTime = parseInt(mainAudio.currentTime, 10);
+        audioInfo.innerHTML =
+          "Befejeződött-e: " +
+          mainAudio.ended +
+          "<br/>Audio hossza: " +
+          duration +
+          " mp" +
+          "<br/>Jelenlegi pozíció: " +
+          currentTime +
+          " mp";
+      }
+
+      mainAudio.ontimeupdate = function () {
+        showAudioInfo();
+      };
+    </script>
+  </body>
+</html>
