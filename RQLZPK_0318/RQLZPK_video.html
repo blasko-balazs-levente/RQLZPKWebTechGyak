@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videó Vezérlés</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      video {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Videó Lejátszó</h1>
+    </header>
+
+    <video id="videoPlayer" width="720" controls>
+      <source src="video.mp4" type="video/mp4" />
+      A böngésződ nem támogatja a video tag-et.
+    </video>
+
+    <button onclick="playVideo()">Indítás</button>
+    <button onclick="pauseVideo()">Leállítás</button>
+    <button onclick="togglePlayPause()">Indítás / Leállítás</button>
+    <button onclick="setVolume(0)">Néma</button>
+    <button onclick="setVolume(0.5)">Halk</button>
+    <button onclick="setVolume(1)">Hangos</button>
+    <button onclick="setPlaybackRate(0.5)">Nagyon Lassú</button>
+    <button onclick="setPlaybackRate(0.75)">Lassú</button>
+    <button onclick="setPlaybackRate(1)">Normál</button>
+    <button onclick="setPlaybackRate(1.25)">Gyorsabb</button>
+    <button onclick="setPlaybackRate(2)">Nagyon Gyors</button>
+    <button onclick="showVideoInfo()">Videó Info</button>
+
+    <footer>
+      <p>NLFUA8</p>
+    </footer>
+
+    <script>
+      const video = document.getElementById("videoPlayer");
+
+      function playVideo() {
+        video.play();
+      }
+
+      function pauseVideo() {
+        video.pause();
+      }
+
+      function togglePlayPause() {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+
+      function setVolume(volume) {
+        video.volume = volume;
+      }
+
+      function setPlaybackRate(speed) {
+        video.playbackRate = speed;
+      }
+
+      function showVideoInfo() {
+        alert(
+          `Befejeződött-e: ${video.ended}\nVideo Hossza: ${video.duration} mp\nJelenlegi Pozíció: ${video.currentTime} mp`
+        );
+      }
+    </script>
+  </body>
+</html>
